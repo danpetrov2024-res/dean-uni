@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кабинет деканата</title>
+    <link rel="stylesheet" href="university.css">
+</head>
+<body style="background-color: darkblue;">
+
+<header class="header">
+    <div class="logo">Электронный деканат</div>
+    <nav>
+        <a href="Электронный деканат.html" style="color:white;">Главная</a>
+        <a href="login.html" style="color:white;">Выход</a>
+    </nav>
+</header>
+
+<main class="container">
+    <br>
+    <br>
+    <br>
+
+    
+    <h2 align="center">Кабинет деканата</h2>
+    <div class="card">
+        <p><b>ФИО:</b> Смирнова Елена Викторовна</p>
+        <p><b>Должность:</b> Секретарь деканата</p>
+        <p><b>Факультет:</b> Информационные технологии</p>
+        <p><b>Email:</b> smirnova@university.ru</p>
+    </div>
+    <br>
+    <br>
+
+    
+    <h2 align="center">Список студентов</h2>
+    <table class="table"  border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>ФИО</th>
+            <th>Группа</th>
+            <th>Статус</th>
+            <th>Действие</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван</td>
+            <td>ИВТ‑21</td>
+            <td>Обучается</td>
+            <td><a class="btn" href="#stud1">Открыть</a></td>
+        </tr>
+        <tr>
+            <td>Сидорова Анна</td>
+            <td>ИВТ‑22</td>
+            <td>Обучается</td>
+            <td><a class="btn" href="#stud2">Открыть</a></td>
+        </tr>
+        <tr>
+            <td>Кузнецов Павел</td>
+            <td>ИВТ‑21</td>
+            <td>Академический отпуск</td>
+            <td><a class="btn" href="#stud3">Открыть</a></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    
+    <h2 align="center">Заявления студентов</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Студент</th>
+            <th>Тип заявления</th>
+            <th>Дата</th>
+            <th>Статус</th>
+            <th>Действие</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван</td>
+            <td>Справка об обучении</td>
+            <td>12.03.2026</td>
+            <td>Новое</td>
+            <td><a class="btn" href="#req1">Открыть</a></td>
+        </tr>
+        <tr>
+            <td>Сидорова Анна</td>
+            <td>Академический отпуск</td>
+            <td>10.03.2026</td>
+            <td>В обработке</td>
+            <td><a class="btn" href="#req2">Открыть</a></td>
+        </tr>
+        <tr>
+            <td>Кузнецов Павел</td>
+            <td>Пересдача</td>
+            <td>05.03.2026</td>
+            <td>Готово</td>
+            <td><a class="btn" href="#req3">Открыть</a></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    
+    <h2 align="center">Группы факультета</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Группа</th>
+            <th>Курс</th>
+            <th>Куратор</th>
+            <th>Действие</th>
+        </tr>
+        <tr>
+            <td>ИВТ‑21</td>
+            <td>3 курс</td>
+            <td>Петров С.А.</td>
+            <td><a class="btn" href="#grp1">Открыть</a></td>
+        </tr>
+        <tr>
+            <td>ИВТ‑22</td>
+            <td>2 курс</td>
+            <td>Соколова М.В.</td>
+            <td><a class="btn" href="#grp2">Открыть</a></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <h2 align="center" id="req1">Заявление — Иванов Иван</h2>
+    <div class="card">
+        <p><b>Тип:</b> Справка об обучении</p>
+        <p><b>Дата подачи:</b> 12.03.2026</p>
+        <p><b>Комментарий:</b> Нужна для предоставления в банк.</p>
+        <p><b>Статус:</b> Новое</p>
+        <button class="btn">Одобрить</button>
+        <button class="btn">Отклонить</button>
+    </div>
+    <br>
+    <br>
+        <h2 align="center" id="req2">Заявление — Сидорова Анна</h2>
+    <div class="card">
+        <p><b>Тип:</b> Справка об обучении</p>
+        <p><b>Дата подачи:</b> 10.03.2026</p>
+        <p><b>Комментарий:</b> Нужна для предоставления в кассу РЖД.</p>
+        <p><b>Статус:</b> В обработке</p>
+ 
+    </div>
+    <br>
+    <br>
+
+        <h2 align="center" id="req3">Заявление — Группы факультета</h2>
+    <div class="card">
+        <p><b>Тип:</b> Справка об обучении</p>
+        <p><b>Дата подачи:</b> 05.03.2026</p>
+        <p><b>Комментарий:</b> Нужна для предоставления в музей.</p>
+        <p><b>Статус:</b> Готово</p>
+
+    </div>
+    <br>
+    <br>
+    
+    <h2 align="center" id="stud1">Карточка студента — Иванов Иван</h2>
+    <div class="card">
+        <p><b>ФИО:</b> Иванов Иван</p>
+        <p><b>Группа:</b> ИВТ‑21</p>
+        <p><b>Статус:</b> Обучается</p>
+        <p><b>Успеваемость:</b> Средний балл — 4.3</p>
+        <p><b>Задолженности:</b> Нет</p>
+    </div>
+    <br>
+    <br>
+
+    <h2 align="center" id="stud2">Карточка студента — Сидорова Анна</h2>
+    <div class="card">
+        <p><b>ФИО:</b> Сидорова Анна</p>
+        <p><b>Группа:</b> ИВТ‑22</p>
+        <p><b>Статус:</b> Обучается</p>
+        <p><b>Успеваемость:</b> Средний балл — 4.3</p>
+        <p><b>Задолженности:</b> Нет</p>
+    </div>
+    <br>
+    <br>
+
+    <h2 align="center" id="stud3">Карточка студента — Кузнецов Павел</h2>
+    <div class="card">
+        <p><b>ФИО:</b> Кузнецов Павел</p>
+        <p><b>Группа:</b> ИВТ‑21</p>
+        <p><b>Статус:</b> Обучается</p>
+        <p><b>Успеваемость:</b> Средний балл — 4.3</p>
+        <p><b>Задолженности:</b> Нет</p>
+    </div>
+    <br>
+    <br>
+    
+    <h2 align="center">Отчёты</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Успеваемость по группам</h3>
+            <p>Средний балл, динамика, статистика.</p>
+        </div>
+        <div class="card">
+            <h3>Посещаемость</h3>
+            <p>Отчёт по дисциплинам и преподавателям.</p>
+        </div>
+        <div class="card">
+            <h3>Статистика заявлений</h3>
+            <p>Количество, типы, сроки обработки.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <h2 align="center">Приказы</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Номер</th>
+            <th>Тип</th>
+            <th>Дата</th>
+            <th>Статус</th>
+        </tr>
+        <tr>
+            <td>№12‑О</td>
+            <td>О зачислении</td>
+            <td>01.03.2026</td>
+            <td>Подписан</td>
+        </tr>
+        <tr>
+            <td>№45‑А</td>
+            <td>Об академическом отпуске</td>
+            <td>10.03.2026</td>
+            <td>На подписи</td>
+        </tr>
+    </table>
+<br>
+<br>
+<br>
+<br>
+</main>
+
+</body>
+<footer class="footer">
+    <p></p>
+</footer>
+</html>

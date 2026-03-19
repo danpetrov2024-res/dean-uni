@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кабинет преподавателя</title>
+    <link rel="stylesheet" href="university.css">
+</head>
+<body style="background-color: darkblue;">
+
+<header class="header">
+    <div class="logo">Электронный деканат</div>
+    <nav>
+        <a href="Электронный деканат.html"  style="color:white;">Главная</a>
+        <a href="login.html"  style="color:white;">Выход</a>
+    </nav>
+</header>
+
+<main class="container">
+    <br>
+    <br>
+    <br>
+
+
+    <h2 align="center">Кабинет преподавателя</h2>
+    <div class="card"><center>
+        <p><b>ФИО:</b> Петров Сергей Даниэльевич</p>
+
+        <p><b>Должность:</b> Старший преподаватель</p>
+
+        <p><b>Кафедра:</b> Информационные технологии</p>
+
+        <p><b>Аудитория:</b> 412</p>
+
+        <p><b>Email:</b> petrov@university.ru</p>
+    </center></div>
+    <br>
+    <br>
+
+    <h2 align="center">Расписание занятий</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>День</th>
+            <th>Время</th>
+            <th>Дисциплина</th>
+            <th>Группа</th>
+            <th>Аудитория</th>
+        </tr>
+        <tr>
+            <td>Понедельник</td>
+            <td>10:00–11:30</td>
+            <td>Программирование</td>
+            <td>ИВТ‑21</td>
+            <td>204</td>
+        </tr>
+        <tr>
+            <td>Среда</td>
+            <td>12:00–13:30</td>
+            <td>Базы данных</td>
+            <td>ИВТ‑22</td>
+            <td>305</td>
+        </tr>
+        <tr>
+            <td>Пятница</td>
+            <td>14:00–15:30</td>
+            <td>Алгоритмы</td>
+            <td>ИВТ‑21</td>
+            <td>204</td>
+        </tr>
+    </table>
+
+
+    <h2 align="center">Мои дисциплины</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Программирование</h3>
+            <p>Группы: ИВТ‑21, ИВТ‑23</p>
+        </div>
+        <div class="card">
+            <h3>Базы данных</h3>
+            <p>Группы: ИВТ‑22</p>
+        </div>
+        <div class="card">
+            <h3>Алгоритмы</h3>
+            <p>Группы: ИВТ‑21</p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+ 
+    <h2 align="center">Группы</h2>
+    <table class="table" border="1" bordercolor="grey" align="center"  bgcolor="white">
+        <tr>
+            <th>Группа</th>
+            <th>Дисциплина</th>
+            <th>Действие</th>
+        </tr>
+        <tr>
+            <td>ИВТ‑21</td>
+            <td>Программирование</td>
+            <td><a class="btn" href="#ved1">Открыть ведомость</a></td>
+        </tr>
+        <tr>
+            <td>ИВТ‑22</td>
+            <td>Базы данных</td>
+            <td><a class="btn" href="#ved2">Открыть ведомость</a></td>
+        </tr>
+        <tr>
+            <td>ИВТ‑21</td>
+            <td>Алгоритмы</td>
+            <td><a class="btn" href="#ved3">Открыть ведомость</a></td>
+        </tr>
+    </table>
+
+
+    <h2 align="center" id="ved1">Электронная ведомость — ИВТ‑21 (Программирование)</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Студент</th>
+            <th>Оценка</th>
+            <th>Посещаемость</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван</td>
+            <td>5</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>Сидорова Анна</td>
+            <td>4</td>
+            <td>85%</td>
+        </tr>
+        <tr>
+            <td>Кузнецов Павел</td>
+            <td>3</td>
+            <td>70%</td>
+        </tr>
+    </table>
+
+        <h2 align="center" id="ved2">Электронная ведомость — ИВТ‑22 (Базы данных)</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Студент</th>
+            <th>Оценка</th>
+            <th>Посещаемость</th>
+        </tr>
+        <tr>
+            <td>Студент 1</td>
+            <td>5</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>Студент 2</td>
+            <td>4</td>
+            <td>85%</td>
+        </tr>
+        <tr>
+            <td>Студент 3</td>
+            <td>3</td>
+            <td>70%</td>
+        </tr>
+    </table>
+
+        <h2 align="center" id="ved3">Электронная ведомость — ИВТ‑21 (Алгоритмы)</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Студент</th>
+            <th>Оценка</th>
+            <th>Посещаемость</th>
+        </tr>
+        <tr>
+            <td>Студент 1</td>
+            <td>5</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>Студент 2</td>
+            <td>4</td>
+            <td>85%</td>
+        </tr>
+        <tr>
+            <td>Студент 3</td>
+            <td>3</td>
+            <td>70%</td>
+        </tr>
+    </table>
+
+        <h2 align="center">Электронная ведомость успеваемости</h2>
+    <table class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>Номер п/п</th>
+            <th>ФИО студента</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   
+    <h2>Загрузить учебные материалы</h2>
+    <div class="card">
+        <form>
+            <label>Выберите дисциплину</label>
+            <select>
+                <option>Программирование</option>
+                <option>Базы данных</option>
+                <option>Алгоритмы</option>
+            </select>
+
+            <label>Файл</label>
+            <input type="file">
+
+            <button class="btn">Загрузить</button>
+        </form>
+    </div>
+<br>
+<br>
+<br>
+<br>
+</main>
+
+</body>
+<footer class="footer">
+    <p></p>
+</footer>
+</html>
