@@ -20,7 +20,7 @@
 
     <h2 align="center">Кабинет студента</h2>
     <div class="card">
-        <p><b>ФИО:</b> Иванов Иван</p>
+        <p><b>ФИО:</b>Иванов Иван Георгиевич</p>
         <p><b>Группа:</b> ИВТ‑21</p>
         <p><b>Направление:</b> Информатика</p>
     </div>
@@ -42,12 +42,25 @@
     </table>
 
     <h2 align="center">Заявления</h2>
-    <a class="btn" href="request.html"  text-align="center">Подать заявление</a>
+    <div style="text-align: center"> 
+    <button class="btn" href="request.html" text-align="center" onclick="request()">Подать заявление</button>
+    <script>
+    function request() {
+    setTimeout(() => {
+        window.location.href = "request.html"; 
+    }, 500);
+}
+</script>
+</div>
+<br>
+<br>
 
 </main>
 
 </body>
 <footer class="footer">
 
+</script> 
+    <p></p>
 </footer>
 </html>
