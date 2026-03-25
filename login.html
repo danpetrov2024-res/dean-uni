@@ -19,7 +19,7 @@
         <h2>Вход в систему</h2>
         <div class="card">
         
-        <label>Логин</label>
+        <label>ФИО</label>
         <input type="text" required>
         </div>
         <div class="card">
@@ -33,11 +33,55 @@
             <option>Студент</option>
             <option>Преподаватель</option>
             <option>Деканат</option>
+            <option>Системный администратор</option>
         </select>
         </div>
         <br>
 
-        <button class="btn"; style="width: 250px; height: 50px;">Войти</button>
+<button class="btn" style="width: 250px; height: 50px;" onclick="enter(event)">Войти</button>
+
+<script>
+function enter(event) {
+    event.preventDefault();
+
+    const login = document.querySelector('input[type="text"]').value.trim();
+    const password = document.querySelector('input[type="password"]').value.trim();
+    const role = document.querySelector('select').value;
+
+    if (!login || !password) {
+        alert("Заполните логин и пароль");
+        return;
+    }
+
+
+    const users = [
+        { login: "Иванов Иван Георгиевич", password: "d9rfj5g04", role: "Студент", page: "student.html" },
+        { login: "Петров Сергей Даниэльевич", password: "t4g9dgh3", role: "Преподаватель", page: "teacher.html" },
+        { login: "Иванов Максим Егорович", password: "3ybe4h64", role: "Преподаватель", page: "teacher.html" },
+        { login: "Александров Олег Васильевич", password: "4hgCr5y6", role: "Преподаватель", page: "teacher.html" },
+        { login: "Смирнова Елена Викторовна", password: "65nf0h4", role: "Деканат", page: "dean.html" },
+        { login: "Максимов Никита Григорьевич", password: "rh6jve3", role: "Системный администратор", page: "sysadmin.html" }
+    ];
+
+    
+    const user = users.find(u =>
+        u.login === login &&
+        u.password === password &&
+        u.role === role
+    );
+
+    if (!user) {
+        alert("Неверные ФИО, пароль или роль");
+        return;
+    }
+
+    alert("Вход выполнен!");
+
+    setTimeout(() => {
+        window.location.href = user.page;
+    }, 500);
+}
+</script>
     </form>
 </div>
 
