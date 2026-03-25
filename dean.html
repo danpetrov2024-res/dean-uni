@@ -126,9 +126,18 @@
         <p><b>Дата подачи:</b> 12.03.2026</p>
         <p><b>Комментарий:</b> Нужна для предоставления в банк.</p>
         <p><b>Статус:</b> Новое</p>
-        <button class="btn">Одобрить</button>
-        <button class="btn">Отклонить</button>
+        <button class="btn" onclick="accept()">Одобрить </button>
+        <button class="btn" onclick="decline()">Отклонить</button>
     </div>
+    <script>
+    function accept() {
+  alert("Заявление одобрено");
+}
+
+function decline() {
+  alert("Заявление отклонено");
+}
+</script>
     <br>
     <br>
         <h2 align="center" id="req2">Заявление — Сидорова Анна</h2>
