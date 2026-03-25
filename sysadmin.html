@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кабинет системного администратора</title>
+    <link rel="stylesheet" href="university.css">
+</head>
+<body style="background-color: darkblue;">
+
+<header class="header">
+    <div class="logo">Электронный деканат</div>
+    <nav>
+        <a href="Электронный деканат.html"  style="color:white;">Главная</a>
+        <a href="login.html"  style="color:white;">Выход</a>
+    </nav>
+</header>
+
+<main class="container">
+    <br>
+    <br>
+    <br>
+
+    <h2 align="center">Кабинет системного администратора</h2>
+    <div class="card"><center>
+        <p><b>ФИО:</b>Максимов Никита Григорьевич</p>
+
+        <p><b>Должность:</b>Системный администратор</p>
+
+        <p><b>Email:</b> nmax@university.ru</p>
+    </center></div>
+    <br>
+    <br>
+        <h2 align="center">Список студентов</h2>
+    <table id="students" class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>ФИО Студента</th>
+            <th>Номер зачётки</th>
+            <th>Логин-Электронная почта</th>
+            <th>Пароль</th>
+        </tr>
+        <tr>
+            <td>Иванов Иван Георгиевич</td>
+            <td>111</td>
+            <td>ivageorg@university.ru</td>
+            <td>d9rfj5g04</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+            <h2 align="center">Список преподавателей</h2>
+    <table id="teachers" class="table" border="1" bordercolor="grey" align="center" bgcolor="white">
+        <tr>
+            <th>ФИО Преподавателя</th>
+            <th>Дисциплины</th>
+            <th>Логин-Электронная почта</th>
+            <th>Пароль</th>
+        </tr>
+        <tr>
+            <td>Петров Сергей Даниэльевич</td>
+            <td>Программирование, Базы данных, Алгоритмы</td>
+            <td>petrov@university.ru</td>
+            <td>t4g9dgh3</td>
+        </tr>
+        <tr>
+            <td>Иванов Максим Егорович</td>
+            <td>Технологии, Дискретная математика, Кодирование C++</td>
+            <td>maxivanov@university.ru</td>
+            <td>3ybe4h64</td>
+        </tr>
+        <tr>
+            <td>Александров Олег Васильевич</td>
+            <td>Психология общения</td>
+            <td>oleeeeeg@university.ru</td>
+            <td>4hgCr5y6</td>
+        </tr>
+    </table>
+    <h2>Создать/удалить аккаунт</h2>
+<div class="card">
+  <form id="userForm">
+    <label>Выберите дисциплину</label>
+    <select id="role">
+      <option>Студент</option>
+      <option>Преподаватель</option>
+    </select>
+
+    <label>ФИО</label>
+    <input id="fio" type="text" required>
+
+    <label>Логин-Электронная почта</label>
+    <input id="email" type="text" required>
+
+    <label>Пароль</label>
+    <input id="password" type="text" required>
+
+    <button type="button" class="btn" onclick="addUser()">Добавить</button>
+    <button type="button" class="btn" onclick="deleteUser()">Удалить</button>
+    <button type="button" class="btn" onclick="exportTables()">Выгрузить в Excel</button>
+  </form>
+</div>
+
+<script src="xlsx.full.min.js"></script>
+<script>
+async function addUser() {
+    const data = {
+        role: document.getElementById("role").value,
+        fio: document.getElementById("fio").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    };
+
+    const res = await fetch("C:/Users/HP/Documents/ИСПо132/Петров/Документы/Электронный деканат.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    alert(result.message);
+    loadUsers();
+}
+
+async function deleteUser() {
+    const email = document.getElementById("email").value;
+
+    const res = await fetch("C:/Users/HP/Documents/ИСПо132/Петров/Документы/Электронный деканат.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+    });
+
+    const result = await res.json();
+    alert(result.message);
+    loadUsers();
+}
+
+function exportTables() {
+    
+    const wb = XLSX.utils.book_new();
+
+    
+    const studentsTable = document.querySelector("table#students");
+    const teachersTable = document.querySelector("table#teachers");
+
+    
+    const wsStudents = XLSX.utils.table_to_sheet(studentsTable);
+    const wsTeachers = XLSX.utils.table_to_sheet(teachersTable);
+
+    
+    XLSX.utils.book_append_sheet(wb, wsStudents, "Студенты");
+    XLSX.utils.book_append_sheet(wb, wsTeachers, "Преподаватели");
+
+    
+    XLSX.writeFile(wb, "C:/Users/HP/Documents/ИСПо132/Петров/users.xlsx");
+
+}
+
+async function loadUsers() {
+    const res = await fetch("C:/Users/HP/Documents/ИСПо132/Петров/Документы/Электронный деканат.html");
+    const users = await res.json();
+
+    const tbody = document.querySelector("#usersTable tbody");
+    tbody.innerHTML = "";
+
+    users.forEach(u => {
+        const row = `
+            <tr>
+                <td>${u.id}</td>
+                <td>${u.role}</td>
+                <td>${u.fio}</td>
+                <td>${u.email}</td>
+            </tr>
+        `;
+        tbody.innerHTML += row;
+    });
+}
+
+loadUsers();
+</script>
+</script>
+</main>
+
+</body>
+<footer class="footer">
+    <p></p>
+</footer>
+</html>
