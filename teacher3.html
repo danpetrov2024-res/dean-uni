@@ -5,7 +5,7 @@
     <title>Кабинет преподавателя</title>
     <link rel="stylesheet" href="university.css">
 </head>
-<body style="background-color: darkblue;">
+<body style="background-color: #f5f5da;">
 
 <header class="header">
     <div class="logo">Электронный деканат</div>
@@ -82,8 +82,20 @@
 
 
 
-    <a href="statement3.html">Электронные Ведомости</a>
+    <button class="btn"  text-align="center" style="width: 250px; height: 50px;" onclick="statement3(event)">Электронные Ведомости</button>
     <br>
+    <script>
+    function statement3(event) {
+    event.preventDefault(); 
+
+    
+
+    setTimeout(() => {
+        window.location.href = "statement3.html"; 
+    }, 500);
+}
+        
+    </script>
     <br>
    
     <h2>Загрузить учебные материалы</h2>
